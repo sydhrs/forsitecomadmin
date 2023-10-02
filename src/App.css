@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  margin: 50px;
+  width: 130px;
+  line-height: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.logo-text {
+  font-weight: normal;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.ant-layout-sider.ant-layout-sider-dark {
+  background-color: black;
+  border-top-right-radius: 50px; /* Radius for top right corner */
+  border-bottom-right-radius: 50px; /* Radius for bottom right corner */
+}
+
+.ant-menu {
+  background-color: transparent;
+  padding: 20px;
+}
+
+.ant-menu-vertical .ant-menu-item {
+  font-size: 14px;
+  color: #c7c7c7;
+  margin-top: 20px;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #383838;
+  border-radius: 5px;
+  color: white;
+  padding: 0 24px;
+  font-weight: bold;
+}
+
+
+.ant-menu-item-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):hover {
+  border: 1px solid white !important;
+}
+

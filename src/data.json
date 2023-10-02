@@ -1,0 +1,21 @@
+{
+  "categories": [
+    { "id": "electronics", "name": "Electronics" },
+    { "id": "clothing", "name": "Clothing" },
+    { "id": "home_appliances", "name": "Home Appliances" }
+  ],
+  "salesData": [
+    { "date": "2023-09-01", "sales": 200, "orders": 50, "inventory": 500, "category": "electronics" },
+    { "date": "2023-09-02", "sales": 350, "orders": 70, "inventory": 480, "category": "electronics" },
+    { "date": "2023-09-03", "sales": 280, "orders": 60, "inventory": 490, "category": "clothing" },
+    { "date": "2023-09-04", "sales": 320, "orders": 65, "inventory": 470, "category": "clothing" },
+    { "date": "2023-09-05", "sales": 400, "orders": 80, "inventory": 460, "category": "home_appliances" }
+  ],
+  "revenueTrendsData": [
+    { "date": "2023-09-01", "revenue": 1500 },
+    { "date": "2023-09-02", "revenue": 1800 },
+    { "date": "2023-09-03", "revenue": 2100 },
+    { "date": "2023-09-04", "revenue": 2400 },
+    { "date": "2023-09-05", "revenue": 2700 }
+  ]
+}

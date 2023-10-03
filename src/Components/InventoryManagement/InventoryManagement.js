@@ -9,6 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {selectCategories, selectProducts} from "../../Selectors";
 import {setProducts} from "../../Slices/productsSlice";
 import EditProductModal from "./EditProductModal";
+import {useLocation} from "react-router-dom";
 
 
 const InventoryManagement = () => {
@@ -22,6 +23,9 @@ const InventoryManagement = () => {
     const products = useSelector(selectProducts)
     const categories = useSelector(selectCategories)
 
+    console.log(products)
+
+
     useEffect(() => {
         if(products?.length === 0)
         {
@@ -34,6 +38,7 @@ const InventoryManagement = () => {
         const categoryFilter = selectedCategory === 'all' || product.category === selectedCategory;
         return searchFilter && categoryFilter;
     });
+
 
 
     const columns = [
@@ -79,6 +84,22 @@ const InventoryManagement = () => {
             render: (quantity) => {
                 return quantity > 0 ? 'In Stock' : 'Out of Stock';
             }
+        },
+        {
+            title: 'Image',
+            dataIndex: 'image',
+            key: 'image',
+            render: (imageData) => {
+                if (typeof imageData === 'string') {
+                    return <img src={imageData} alt="Product" style={{ maxWidth: '80px' }} />;
+                } else if (imageData instanceof ArrayBuffer || ArrayBuffer.isView(imageData)) {
+                    const blob = new Blob([imageData], { type: 'image/jpeg' });
+                    const imageUrl = URL.createObjectURL(blob);
+                    return <img src={imageUrl} alt="Product" style={{ maxWidth: '80px' }} />;
+                } else {
+                    return null;
+                }
+            },
         },
         {
             title: 'Actions',

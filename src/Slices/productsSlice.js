@@ -10,6 +10,7 @@ export const productSlice = createSlice({
     },
     reducers: {
         addProduct: (state, action) => {
+            console.log(state, action)
             state.products.unshift(action.payload)
         },
         setProducts: (state, action) => {

@@ -42,12 +42,25 @@ const ProductRegistration = () => {
         message.success('Product added successfully!');
     };
 
+
     const uploadProps = {
         beforeUpload: (file) => {
-            setImageFile(file);
-            return false;
+            return new Promise((resolve) => {
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                    const imageBuffer = reader.result; // ArrayBuffer representing the image
+                    setImageFile(imageBuffer);
+                    resolve(false); // Prevent default upload behavior
+                };
+                reader.readAsArrayBuffer(file);
+            });
         },
     };
+
+
+    console.log(imageFile)
+
+
 
     const validateNonNegativePrice = (rule, value, callback) => {
         if (value >= 0 || !value) {

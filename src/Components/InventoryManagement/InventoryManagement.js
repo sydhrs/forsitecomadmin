@@ -23,11 +23,13 @@ const InventoryManagement = () => {
     const categories = useSelector(selectedCategories)
 
     useEffect(() => {
-        dispatch(setProducts({products: jsonData.products, categories: jsonData.categories}))
-    }, []);
+        if(products?.length === 0)
+        {
+            dispatch(setProducts({products: jsonData.products, categories: jsonData.categories}))
+        }
+    }, [products]);
 
-
-    const filteredProducts = products.filter((product) => {
+    const filteredProducts = products?.filter((product) => {
         const searchFilter = product.name.toLowerCase().includes(searchText.toLowerCase());
         const categoryFilter = selectedCategory === 'all' || product.category === selectedCategory;
         return searchFilter && categoryFilter;

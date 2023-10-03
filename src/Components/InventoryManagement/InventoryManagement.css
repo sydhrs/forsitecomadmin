@@ -49,3 +49,11 @@
     color: #e73a3a;
     font-size: 12px;
 }
+
+.custom-alert {
+    margin-top: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+}

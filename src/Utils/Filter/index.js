@@ -13,7 +13,7 @@ const DropdownFilter = ({handleChange, selectedOption, placeholder, filtersList}
             value={selectedOption}
         >
             <Option value="all">All Categories</Option>
-            {filtersList.map((opt) => (
+            {filtersList?.map((opt) => (
                 <Option key={opt.id} value={opt.name}>
                     {opt.name}
                 </Option>

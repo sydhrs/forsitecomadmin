@@ -1,0 +1,40 @@
+/* styles.css */
+
+.search-bar-container {
+    width: 400px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.search-bar {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-bar-container.active {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.search-bar.active {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+}
+
+.ant-input::placeholder {
+    color: gray;
+}
+
+.ant-input {
+    background-color: transparent;
+    border: none;
+}

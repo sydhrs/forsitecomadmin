@@ -9,6 +9,9 @@ export const productSlice = createSlice({
         modalProductId: null,
     },
     reducers: {
+        addProduct: (state, action) => {
+            state.products.unshift(action.payload)
+        },
         setProducts: (state, action) => {
             state.products = action.payload.products;
             state.categories = action.payload.categories
@@ -23,6 +26,6 @@ export const productSlice = createSlice({
     },
 });
 
-export const { setProducts, updateProductQuantity, openModal, closeModal } = productSlice.actions;
+export const { setProducts, updateProductQuantity, addProduct } = productSlice.actions;
 
 export default productSlice.reducer;

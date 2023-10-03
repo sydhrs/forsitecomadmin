@@ -6,7 +6,7 @@ import SearchBar from "../../Utils/SearchBar";
 import DropdownFilter from "../../Utils/Filter";
 import {EditFilled} from "@ant-design/icons";
 import {useDispatch, useSelector} from "react-redux";
-import {selectedCategories, selectProducts} from "../../Selectors";
+import {selectCategories, selectProducts} from "../../Selectors";
 import {setProducts} from "../../Slices/productsSlice";
 import EditProductModal from "./EditProductModal";
 
@@ -20,7 +20,7 @@ const InventoryManagement = () => {
 
     const dispatch = useDispatch()
     const products = useSelector(selectProducts)
-    const categories = useSelector(selectedCategories)
+    const categories = useSelector(selectCategories)
 
     useEffect(() => {
         if(products?.length === 0)

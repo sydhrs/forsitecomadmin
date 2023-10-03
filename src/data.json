@@ -3,7 +3,8 @@
     { "id": "1", "name": "Electronics" },
     { "id": "2", "name": "Clothing" },
     { "id": "3", "name": "Home Appliances" },
-    { "id": "4", "name": "Toys" }
+    { "id": "4", "name": "Toys" },
+    { "id": "5", "name": "Gaming" }
   ],
   "salesData": [
     { "date": "2023-09-01", "sales": 200, "orders": 50, "inventory": 500, "category": "electronics" },

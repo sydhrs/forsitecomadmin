@@ -1,0 +1,34 @@
+# Node.js
+node_modules/
+
+# Build files
+build/
+dist/
+
+# Environment variables
+.env
+
+# IDE files
+.idea/
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Logs
+*.log
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Miscellaneous
+Thumbs.db
+.cache/
+.history/

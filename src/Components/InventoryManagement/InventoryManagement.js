@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { Table, Input, Button, Space, Modal, Form, Tooltip } from 'antd';
 import jsonData from '../../data.json';
 import './InventoryManagement.css'
+import SearchBar from "../../Utils/SearchBar";
 
 const { confirm } = Modal;
 
 const InventoryManagement = () => {
 
+    const [searchText, setSearchText] = useState('');
     const {products} = jsonData
-
 
     const columns = [
         {
@@ -54,8 +55,13 @@ const InventoryManagement = () => {
         pageSize: 5
     }
 
+    const handleSearch = value => {
+        setSearchText(value);
+    };
+
     return (
         <div>
+            <SearchBar onSearch={handleSearch}/>
             <Table
                 dataSource={products}
                 columns={columns}

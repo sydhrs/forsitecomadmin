@@ -1,3 +1,7 @@
 .custom-tooltip {
     max-width: 400px;
 }
+
+.inventory-management-container {
+    padding: 16px;
+}

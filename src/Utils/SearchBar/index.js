@@ -18,7 +18,7 @@ const SearchBar = ({ onSearch }) => {
             <Input
                 className={`search-bar ${isActive ? 'active' : ''}`}
                 placeholder="Search by product name"
-                prefix={<SearchOutlined className="search-icon" />}
+                suffix={<SearchOutlined className="search-icon" />}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 onChange={(e) => onSearch(e.target.value)}

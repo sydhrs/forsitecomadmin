@@ -11,6 +11,10 @@ const InventoryManagement = () => {
     const [searchText, setSearchText] = useState('');
     const {products} = jsonData
 
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+
     const columns = [
         {
             title: 'Product name',
@@ -60,10 +64,10 @@ const InventoryManagement = () => {
     };
 
     return (
-        <div>
+        <div className="inventory-management-container">
             <SearchBar onSearch={handleSearch}/>
             <Table
-                dataSource={products}
+                dataSource={filteredProducts}
                 columns={columns}
                 rowKey="id"
                 pagination={paginationConfig}

@@ -8,6 +8,7 @@
     border-radius: 30px;
     display: flex;
     transition: all 0.3s ease;
+    margin-bottom: 16px;
 }
 
 .search-bar {
@@ -38,3 +39,13 @@
     background-color: transparent;
     border: none;
 }
+
+
+.search-bar-container.active .ant-input {
+    color: white;
+}
+
+.search-bar-container.active .ant-input-clear-icon {
+    color: white;
+}
+

@@ -1,22 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Chart, LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, BarChart, Bar} from 'recharts';
 import { Card, Select, Row, Col } from 'antd';
 import jsonData from '../../data.json';
 import './RevenueAnalysis.css';
-import TotalDisplayCard from "./TotalDisplayCard"; // Import your styles
+import TotalDisplayCard from "./TotalDisplayCard";
 
 const { Option } = Select;
 
 const RevenueAnalysis = () => {
     const { categories, salesData, revenueTrendsData } = jsonData;
 
-    const [selectedCategory, setSelectedCategory] = React.useState('all');
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredData = selectedCategory === 'all' ? salesData : salesData.filter(item => item.category === selectedCategory);
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     const displayTotalValues = [
         {
             title: "Total Orders",
@@ -41,13 +38,14 @@ const RevenueAnalysis = () => {
             </Row>
             <Card title="Inventory Trends" style={{marginBottom: 16}}>
                 <Select
+
                     value={selectedCategory}
                     className="select-category"
                     onChange={value => setSelectedCategory(value)}
                 >
                     <Option value="all">All Categories</Option>
                     {categories.map(category => (
-                        <Option key={category.id} value={category.id}>
+                        <Option key={category.id} value={category.value}>
                             {category.name}
                         </Option>
                     ))}

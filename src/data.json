@@ -1,17 +1,19 @@
 {
   "categories": [
-    { "id": "1", "name": "Electronics" },
-    { "id": "2", "name": "Clothing" },
-    { "id": "3", "name": "Home Appliances" },
-    { "id": "4", "name": "Toys" },
-    { "id": "5", "name": "Gaming" }
+    { "id": "1", "name": "Electronics", "value": "electronics"},
+    { "id": "2", "name": "Clothing", "value": "clothing" },
+    { "id": "3", "name": "Home Appliances", "value": "home_appliances"  },
+    { "id": "4", "name": "Toys", "value": "toys"  },
+    { "id": "5", "name": "Gaming", "value": "gaming"  }
   ],
   "salesData": [
     { "date": "2023-09-01", "sales": 200, "orders": 50, "inventory": 500, "category": "electronics" },
     { "date": "2023-09-02", "sales": 350, "orders": 70, "inventory": 480, "category": "electronics" },
     { "date": "2023-09-03", "sales": 280, "orders": 60, "inventory": 490, "category": "clothing" },
     { "date": "2023-09-04", "sales": 320, "orders": 65, "inventory": 470, "category": "clothing" },
-    { "date": "2023-09-05", "sales": 400, "orders": 80, "inventory": 460, "category": "home_appliances" }
+    { "date": "2023-09-05", "sales": 400, "orders": 80, "inventory": 460, "category": "home_appliances" },
+    { "date": "2023-09-06", "sales": 580, "orders": 20, "inventory": 543, "category": "toys" },
+    { "date": "2023-09-07", "sales": 420, "orders": 40, "inventory": 600, "category": "gaming" }
   ],
   "revenueTrendsData": [
     { "date": "2023-09-01", "revenue": 1500 },

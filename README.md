@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Forcit Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Forcit Admin Dashboard is a React-based web application designed for efficient management of products, inventory, and revenue analysis.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Follow these steps to set up and run the project locally:
 
-### `npm start`
+#### 1. Clone the Repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+git clone forcitecomadmin
+cd forcitecomadmin
+```
+#### 2. Install Dependencies:
+```bash
+yarn install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 3. Run the Application:
+```bash
+yarn start
+```
+## Getting Started
 
-### `npm test`
+### Dependencies
+Recharts: A composable charting library built on React components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ant Design (antd): A React UI library with a set of high-quality components and demos for building rich, interactive user interfaces.
 
-### `npm run build`
+React Redux: Official React bindings for Redux, a predictable state container for JavaScript applications.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Redux Persist: A library that enables automatic persisting of your Redux state to your storage engine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React Router: Declarative routing for React.js.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to Navigate
 
-### `npm run eject`
+### Landing on Revenue Analysis Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Upon logging in or landing on the dashboard, you will be directed to the Revenue Analysis page. Here, you can view all the key metrics of the application:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Total Orders and Sales: Displayed as cards for quick reference.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Graphs: Graphical representations comparing various metrics over different dates.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Inventory Management
 
-## Learn More
+The Inventory Management page allows you to manage your product inventory efficiently:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+List of Products: View a complete list of products in the inventory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Filtering: Products can be filtered based on different criteria, making it easier to find specific items.
 
-### Code Splitting
+Sorting: Products can be sorted by different attributes, providing flexibility in organizing the inventory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Search: Utilize the search functionality to quickly locate products by their names or other attributes.
 
-### Analyzing the Bundle Size
+### Product Registration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The Product Registration page enables you to add new products to your inventory:
 
-### Making a Progressive Web App
+Form: Fill out the product details including name, description, quantity, price, category, and upload an image.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Image Upload: Upload a product image, which will be displayed alongside the product information.
 
-### Advanced Configuration
+Submission: Submit the form to add the product to the inventory.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Built With
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React JS, Recharts, Redux JS, JavaScript (ES6+), Redux Toolkit, HTML/CSS, GIT

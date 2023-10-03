@@ -5,7 +5,7 @@ import {
     AppstoreOutlined,
     ContainerOutlined,
 } from '@ant-design/icons';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom';
 import './App.css';
 import RevenueAnalysis from './Components/RevenueAnalysis/RecoveryAnalysis';
 import InventoryManagement from './Components/InventoryManagement/InventoryManagement';
@@ -37,6 +37,7 @@ const App = () => {
                     <Layout style={{ marginLeft: 300, padding: '20px' }}>
                     <Content style={{ overflow: 'auto', minHeight: '100vh' }}>
                         <Routes>
+                            <Route path="/" element={<Navigate to={"/revenue-analysis"} />}/>
                             <Route path="revenue-analysis" element={<RevenueAnalysis />} />
                             <Route path="inventory-management" element={<InventoryManagement />} />
                             <Route path="product-registration" element={<ProductRegistration />} />

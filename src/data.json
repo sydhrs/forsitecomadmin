@@ -17,5 +17,42 @@
     { "date": "2023-09-03", "revenue": 2100 },
     { "date": "2023-09-04", "revenue": 2400 },
     { "date": "2023-09-05", "revenue": 2700 }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Charger, 23W 3 in 1 wireless charging station, Fast Charging dock for iPhone 15/14/13/12/11 Pro Max/X/Xs Max, AirPods 3/2/pro, iWatch Series 8/7/6/5/SE/4/3/2, Samsung Phones Charger Stand",
+      "quantity": 100,
+      "price": "$24",
+      "image": "charger.png",
+      "inventoryStatus": "In Stock"
+    },
+    {
+      "id": 2,
+      "name": "Joyracer 24V Kids Ride on Truck Car with Remote Control & 2 Seater, 2*200W Motor, 9 AH Battery Powered Toy Car w/ Spring Suspension, 4 Large Wheels, 3 Speeds, LED Lights, Bluetooth for Girls Boy Black",
+      "quantity": 150,
+      "price": "$120",
+      "image": "joyracer.png",
+      "inventoryStatus": "In Stock"
+
+    },
+    {
+      "id": 3,
+      "name": "10 Pack Solar Lights Outdoor Decorative, Solar Pathway Lights Outdoor, Solar Powered Garden Yard Lights for Walkway Sidewalk Driveway. (Brown, Cool White)",
+      "quantity": 0,
+      "price": "$50",
+      "image": "lights.png",
+      "inventoryStatus": "Out of Stock"
+
+    },
+    {
+      "id": 4,
+      "name": "Samsaimo Stand Mixer,6.5-QT 660W 10-Speed Tilt-Head Food Mixer, Kitchen Electric Mixer with Bowl, Dough Hook, Beater, Whisk for Most Home Cooks, (6.5QT, Empire Red）",
+      "quantity": 200,
+      "price": "$98",
+      "image": "juicer.png",
+      "inventoryStatus": "In Stock"
+
+    }
   ]
 }

@@ -13,6 +13,10 @@ const RevenueAnalysis = () => {
     const [selectedCategory, setSelectedCategory] = React.useState('all');
     const filteredData = selectedCategory === 'all' ? salesData : salesData.filter(item => item.category === selectedCategory);
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     const displayTotalValues = [
         {
             title: "Total Orders",

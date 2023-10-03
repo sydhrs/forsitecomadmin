@@ -3,17 +3,24 @@ import { Table, Input, Button, Space, Modal, Form, Tooltip } from 'antd';
 import jsonData from '../../data.json';
 import './InventoryManagement.css'
 import SearchBar from "../../Utils/SearchBar";
+import DropdownFilter from "../../Utils/Filter";
 
 const { confirm } = Modal;
 
 const InventoryManagement = () => {
 
     const [searchText, setSearchText] = useState('');
-    const {products} = jsonData
+    const [selectedCategory, setSelectedCategory] = useState('all');
 
-    const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(searchText.toLowerCase())
-    );
+    const {products, categories} = jsonData
+
+
+    const filteredProducts = products.filter((product) => {
+        const searchFilter = product.name.toLowerCase().includes(searchText.toLowerCase());
+        const categoryFilter = selectedCategory === 'all' || product.category === selectedCategory;
+        return searchFilter && categoryFilter;
+    });
+
 
     const columns = [
         {
@@ -49,6 +56,11 @@ const InventoryManagement = () => {
             }
         },
         {
+            title: 'Category',
+            dataIndex: 'category',
+            key: 'category',
+        },
+        {
             title: 'Inventory status',
             dataIndex: 'inventoryStatus',
             key: 'inventoryStatus',
@@ -63,9 +75,16 @@ const InventoryManagement = () => {
         setSearchText(value);
     };
 
+    const handleCategoryChange = (value) => {
+        setSelectedCategory(value);
+    };
+
     return (
         <div className="inventory-management-container">
-            <SearchBar onSearch={handleSearch}/>
+            <div className='search-filters-container'>
+                <SearchBar onSearch={handleSearch}/>
+                <DropdownFilter placeholder={'Select Category'} filtersList={categories} handleChange={handleCategoryChange} selectedOption={selectedCategory}/>
+            </div>
             <Table
                 dataSource={filteredProducts}
                 columns={columns}

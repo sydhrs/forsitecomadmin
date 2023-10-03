@@ -5,3 +5,11 @@
 .inventory-management-container {
     padding: 16px;
 }
+
+
+.search-filters-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}

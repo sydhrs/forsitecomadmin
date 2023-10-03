@@ -1,0 +1,11 @@
+
+.custom-select {
+    min-width: 200px;
+    margin-left: 10px;
+}
+
+.ant-select .ant-select-selector {
+    border-radius: 20px;
+    background-color: black;
+}
+

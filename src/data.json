@@ -1,8 +1,9 @@
 {
   "categories": [
-    { "id": "electronics", "name": "Electronics" },
-    { "id": "clothing", "name": "Clothing" },
-    { "id": "home_appliances", "name": "Home Appliances" }
+    { "id": "1", "name": "Electronics" },
+    { "id": "2", "name": "Clothing" },
+    { "id": "3", "name": "Home Appliances" },
+    { "id": "4", "name": "Toys" }
   ],
   "salesData": [
     { "date": "2023-09-01", "sales": 200, "orders": 50, "inventory": 500, "category": "electronics" },
@@ -25,6 +26,7 @@
       "quantity": 100,
       "price": "$24",
       "image": "charger.png",
+      "category": "Electronics",
       "inventoryStatus": "In Stock"
     },
     {
@@ -33,6 +35,7 @@
       "quantity": 150,
       "price": "$120",
       "image": "joyracer.png",
+      "category": "Toys",
       "inventoryStatus": "In Stock"
 
     },
@@ -42,6 +45,7 @@
       "quantity": 0,
       "price": "$50",
       "image": "lights.png",
+      "category": "Electronics",
       "inventoryStatus": "Out of Stock"
 
     },
@@ -51,6 +55,7 @@
       "quantity": 200,
       "price": "$98",
       "image": "juicer.png",
+      "category": "Home Appliances",
       "inventoryStatus": "In Stock"
 
     }

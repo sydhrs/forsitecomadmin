@@ -23,9 +23,6 @@ const InventoryManagement = () => {
     const products = useSelector(selectProducts)
     const categories = useSelector(selectCategories)
 
-    console.log(products)
-
-
     useEffect(() => {
         if(products?.length === 0)
         {
@@ -89,17 +86,9 @@ const InventoryManagement = () => {
             title: 'Image',
             dataIndex: 'image',
             key: 'image',
-            render: (imageData) => {
-                if (typeof imageData === 'string') {
-                    return <img src={imageData} alt="Product" style={{ maxWidth: '80px' }} />;
-                } else if (imageData instanceof ArrayBuffer || ArrayBuffer.isView(imageData)) {
-                    const blob = new Blob([imageData], { type: 'image/jpeg' });
-                    const imageUrl = URL.createObjectURL(blob);
-                    return <img src={imageUrl} alt="Product" style={{ maxWidth: '80px' }} />;
-                } else {
-                    return null;
-                }
-            },
+            render: (imageUrl) => (
+               <img src={imageUrl} alt="Product" style={{ maxWidth: '80px' }} />
+            ),
         },
         {
             title: 'Actions',

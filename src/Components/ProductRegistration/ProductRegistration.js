@@ -49,19 +49,17 @@ const ProductRegistration = () => {
                 const reader = new FileReader();
                 reader.onloadend = () => {
                     const imageBuffer = reader.result; // ArrayBuffer representing the image
-                    setImageFile(imageBuffer);
+                    const blob = new Blob([imageBuffer], { type: 'image/jpeg' });
+                    const imageUrl = URL.createObjectURL(blob);
+                    setImageFile(imageUrl);
                     resolve(false); // Prevent default upload behavior
                 };
                 reader.readAsArrayBuffer(file);
             });
         },
+        maxCount: 1,
     };
-
-
-    console.log(imageFile)
-
-
-
+    
     const validateNonNegativePrice = (rule, value, callback) => {
         if (value >= 0 || !value) {
             callback();

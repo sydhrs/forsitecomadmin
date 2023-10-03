@@ -14,17 +14,19 @@ const menuItems = [
     { key: 'revenue-analysis', icon: <DesktopOutlined />, label: 'Revenue Analysis', path: '/revenue-analysis' },
     { key: 'inventory-management', icon: <AppstoreOutlined />, label: 'Inventory Management', path: '/inventory-management' },
     { key: 'product-registration', icon: <ContainerOutlined />, label: 'Product Registration', path: '/product-registration' },
-    // Add more menu items as needed
 ];
 
-const pathToKeyMap = menuItems.reduce((acc, item) => {
-    acc[item.path] = item.key;
-    return acc;
-}, {});
+const pathToKeyMap = {};
+
 
 const NavMenu = () => {
 
     const location = useLocation()
+
+    menuItems.forEach(item => {
+        pathToKeyMap[item.path] = item.key;
+    });
+
     const selectedKey = pathToKeyMap[location.pathname] || '';
 
     return (

@@ -72,8 +72,11 @@ const InventoryManagement = () => {
         },
         {
             title: 'Inventory status',
-            dataIndex: 'inventoryStatus',
+            dataIndex: 'quantity',
             key: 'inventoryStatus',
+            render: (quantity) => {
+                return quantity > 0 ? 'In Stock' : 'Out of Stock';
+            }
         },
         {
             title: 'Actions',

@@ -13,3 +13,9 @@
     margin-bottom: 20px;
     justify-content: space-between;
 }
+
+.update-inventory {
+    background-color: black;
+    color: white;
+    border: none;
+}
